@@ -1,9 +1,7 @@
+# include <stdio.h>
 # include <stdlib.h>
-int main(int argc, char *argu [])
+int main(int argc, char const *argu [])
 {
-    //recibe una palabra y la muestra
-    char *a;
-    a= argu[1];
-    printf("%s\n", a);
+    printf("%s\n", argu [1]);
     return 0;
 }
