@@ -1,7 +1,7 @@
 # include <stdio.h>
 # include <stdlib.h>
-int main(int argc, char const *argu [])
+int main(int argc, char const * argv [])
 {
-    printf("%s\n", argu [1]);
-    return 0;
+    printf("%s\n", argv[1]);
+    devuelve 0;
 }
