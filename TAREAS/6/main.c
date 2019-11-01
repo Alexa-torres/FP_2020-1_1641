@@ -7,7 +7,7 @@ for(int i=1;i<argc;i++){//aqui empezamo a mostrar
 j=atoi(argv[i]);
 s=s*j;
 }
-for8int w=1;w<argc;w++){//aqui empezamos a checar
+forint w=1;w<argc;w++){//aqui empezamos a checar
 r=s/k;
 printf("%i\n",r);
 }
