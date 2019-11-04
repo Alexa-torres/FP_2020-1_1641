@@ -3,5 +3,5 @@
 int main(int argc, char const * argv [])
 {
     printf("%s\n", argv[1]);
-    devuelve 0;
+    return 0;
 }
