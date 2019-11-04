@@ -5,7 +5,7 @@ int valor(char n){
 	int z;
 	switch(n){
 		case 'J':
-			Z=10;
+			z=10;
 			break;
 		case 'Q':
 			z=10;
