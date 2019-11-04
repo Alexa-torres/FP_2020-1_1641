@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-int main(int argc,char* arg[]{
+int main(int argc,char* arg[]){
 	//declarando variables y asignando valor
 	double x=0;
 	//construyendo la estructura de repeticion con for y convirtiendo argumentos a float
