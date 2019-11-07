@@ -1,15 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 int main(int argc,char* arg[]){
-	//declarando variables y asignando valor
-	double x=0;
-	//construyendo la estructura de repeticion con for y convirtiendo argumentos a float
-	for(int i=1; i<argc;i++){
-		double y=atof(argv[i]);
-		x=y+x;
+	//se declara otra lista para guardar la lista de argu
+	//tambien se declara la variable suma
+	//argc es el numero de argumentos
+	float lista[argc],suma=0
+	//se declara promedio como numero real porque el resultado suele ser con decimales
+	float promedio;
+	//este for es para copiar argu a lista
+	//se empiea con 1 y no con 0 porque argu[0] es ./main
+	for(int i=1;1<argc;i++){
+		list[i]=atof(argu[i]);
 	}
-	//haciendo la operacion para generar promedio
-	double promedio=x//argc-1);
-	printf("&.2lf\n", promedio);
-	return 0;
-}
+	//este for es para sumar los elementos de la lista
+	//al principio suma=0 asi que la primera vez suma=lista[1]
+	//si suma=lista[1] la segunda vez que haga el proceso sera suma=lista[1]+lista[2] y asi sucecivamente
+	for(int i=1;i<argc;i++){
+		suma=suma+lista[i];
+	}
+	//en el promedio a la suma se le divide por argc-1
+	//para quitar el ./main y solo cuenten los numeros que entran
+	promedio=(float)suma/(argc-1);
+	printf("%.2f\n",promedio);
+	return 0;	
+	}
