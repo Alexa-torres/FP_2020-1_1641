@@ -1,11 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
-int main(int argc, char *argv[]){
-	//toma valores necesarios como base y exponente
-	int b= atoi(argv[1]); //base
-	int e= atoi(argv[2]); //exponente
-	int p= pow(b,e); //aqui se hace la operacion
-	printf("%i\n",p);
+int main(int argc, char*argu[]){
+	//declaramos variables
+	int a;
+	int b;
+	int c=1;
+	a=atof(argu[1]);
+	b=atof(argu[2]);
+	//decimos en donde lo vamos a guardar
+	for(int i=0; i<b; i++){
+	//decimos en donde se va a guardar y que se va a ir multiplicando
+	c=c*a;
+	}
+	//imprimimos el resultado
+	print("%.2d\n", c);
 	return 0;
 }
