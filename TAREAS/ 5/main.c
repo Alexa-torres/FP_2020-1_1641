@@ -45,7 +45,7 @@ int main(int argc,char*argu[]){
 		else{//si no basta con un atoi
 			imprimir=atoi(argu[i]);
 		}
-		printf("&i\n",imprimir);
+		printf("%i\n",imprimir);
 	}
 	return 0;
 }
