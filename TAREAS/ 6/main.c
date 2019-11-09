@@ -8,6 +8,7 @@ j=atoi(argv[i]);
 s=s*j;
 }
 for(int w=1;w<argc;w++){//aqui empezamos a checar
+k=atoi(argv[w]);
 r=s/k;
 printf("%i\n",r);
 }
