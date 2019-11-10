@@ -13,6 +13,6 @@ int main(int argc, char*argu[]){
 	c=c*a;
 	}
 	//imprimimos el resultado
-	print("%.2d\n", c);
+	printf("%d\n", c);
 	return 0;
 }
