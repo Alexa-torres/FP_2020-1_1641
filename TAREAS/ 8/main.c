@@ -2,7 +2,7 @@
 #include <stdlib.h>
 int main(int argc, char*argu[]){
 	//declarando variables
-	float a,b,c;
+	double a,b,c;
 	//convirtiendo los argumentos y guardando en la variable flotante
 	a=atof(argu[1]);
 	b=atof(argu[2]);
