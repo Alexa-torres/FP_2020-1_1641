@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-int main(int argc,char* argu[]){
+int main(int argc,char* argv[]){
 	//se declara otra lista para guardar la lista de argu
 	//tambien se declara la variable suma
 	//argc es el numero de argumentos
@@ -10,7 +10,7 @@ int main(int argc,char* argu[]){
 	//este for es para copiar argu a lista
 	//se empiea con 1 y no con 0 porque argu[0] es ./main
 	for(int i=1;i<argc;i++){
-		lista[i]=atof(argu[i]);
+		lista[i]=atof(argv[i]);
 	}
 	//este for es para sumar los elementos de la lista
 	//al principio suma=0 asi que la primera vez suma=lista[1]
