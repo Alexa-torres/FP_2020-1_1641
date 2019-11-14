@@ -31,19 +31,19 @@ int valor(char n){
 	}
 	return z;
 }
-int main(int argc,char*argu[]){
+int main(int argc,char*argv[]){
 	int imprimir,
 	coi;//coi significa char o int
 	for(int i=1;i<argc;i++){//se empieza a recorrer la lista en el subindice 1
 		//coi va a tener un valor booleano
-		coi=argu[i][0]=='J'||argu[i][0]=='j'||
-		argu[i][0]=='Q'||argu[i][0]=='q'||argu[i][0]=='K'
-		||argu[i][0]=='k'||argu[i][0]=='A'||argu[i][0]=='a';
+		coi=argv[i][0]=='J'||argv[i][0]=='j'||
+		argv[i][0]=='Q'||argv[i][0]=='q'||argv[i][0]=='K'
+		||argv[i][0]=='k'||argv[i][0]=='A'||argv[i][0]=='a';
 		if (coi==1){//si es un caracter a pedir se usa la funcion valor
-			imprimir=valor(argu[i][0]);
+			imprimir=valor(argv[i][0]);
 		}
 		else{//si no basta con un atoi
-			imprimir=atoi(argu[i]);
+			imprimir=atoi(argv[i]);
 		}
 		printf("%i\n",imprimir);
 	}
