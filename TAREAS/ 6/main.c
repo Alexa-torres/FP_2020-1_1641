@@ -1,16 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
-int main(int argc, char*argv[]){//para ver cuantos parametros de entrada estoy metiendo
-int s=1;// aqui empece a mosatrar que inicio en 0
-int r,j,k;// estas son las variables que ese van a utilizar
-for(int i=1;i<argc;i++){ // aqui empezamos a mostrar
-j=atoi(argv[i]);
-s=s*j;
-}
-for(int w=1;w<argc; w++){//aqui empezamos a checar
-	k=atoi(argv[w]);//se empieza a checar
-	r=s/k;
-	printf ("%i\n",r);
-}
-return 0;
+
+int main( int argc, char *argv[]) {
+
+	int resultado;  // Resultado de la multiplicacion que se va a mostrar
+
+	for( int i=1; i<argc; i++) {  // Este 'for' recorrera la lista elemento por elemento
+		resultado=1;
+                                      // Este 'for' multiplicara a todos los elementos de la lista,
+		for( int j=1; j<argc; j++) {  // excepto excepto al de la posicion donde se encuentra
+			if(j!=i) {                          
+				resultado = resultado*atoi(argv[j]);  
+			} 
+		}
+
+		printf("%d\n", resultado);  // Imprime el resultado y cada valor se imprimira comforme se recorra la lista
+	}                               // Al final del for se habran impreso un total de 'argc' numeros
+
+
+	return 0;
 }
