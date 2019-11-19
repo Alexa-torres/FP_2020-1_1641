@@ -1,58 +1,47 @@
-#include <stdlib.h>
 #include <stdio.h>
-char m;
-int x;
-int main(int argc, char*argv[]) {
-for (int i=1; i<argc; i++){//para que el programa vaya recorriendo los valores de entrada
- m=argv[i][0];//se usa el cero para que en realidad tenga el valor de los argumentos y no solo los recorra
- if(m=='J'||m=='Q'||m=='K'||m=='A'){//en caso de que el valor ingredsado seas una letra
-  switch (m){
-     case'J':
-  printf("10\n");
- break;
- case'Q':
-  printf("10\n");
- break;
- case'K':
-  printf("10\n");
- break;
- case'A':
-  printf("11\n");
- }
-}else{
-  x=atoi(argv[i]);//en caso de que no sea una letra, se imprime el numero se se ingresa usando otro switch y convirtiendo el caracter a numero
- switch(x){
- case 2:
-  printf("2\n");
- break;
- case 3:
-  printf("3\n");
- break;
- case 4:
-  printf("4\n");
- break;
- case 5:
-  printf("5\n");
- break;
- case 6:
-  printf("6\n");
- break;
- case 7:
-  printf("7\n");
-  break;
- case 8:
-  printf("8\n");
- break;
- case 9:
-  printf("9\n");
- break;
- case 10:
-  printf("10\n");
- break;
- default:
- printf("Ingrese número válido\n");
+#include <stdlib.h>
+
+int valorLetras(char n) {  // Con esta funcion se asigna un valor numerico a cada caso de letra
+
+	int z;
+
+	switch(n){
+
+		case 'J': z=10;
+		break;
+
+		case 'Q': z=10;
+		break;
+
+		case 'K': z=10;
+		break;
+
+		case 'A': z=11;
+		break;
+	}
+
+	return z;
 }
-}
-}
-return 0;
+
+
+int main(int argc, char *argv[]) {
+
+	int valor, X;  // X tendra un valor booleano dentro de la funcion
+
+	for(int i=1; i<argc; i++) {
+
+		X = argv[i][0]=='J' || argv[i][0]=='Q' || argv[i][0]=='K' || argv[i][0]=='A';
+
+		if(X==1) {
+			valor = valorLetras(argv[i][0]);  // Si alguno de los argumentos es alguna de las letras J, Q, K o A,
+		}                                     // la funcion 'valorLetras' convertira el caracter en un valor entero
+		else {
+			valor = atoi(argv[i]);            // Si el argumento es un valor entre 2 y 10, el caracter se convertira en entero
+		}
+
+		printf("%i\n", valor);
+	}
+
+
+	return 0;
 }
