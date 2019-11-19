@@ -1,17 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
-float m;
-float y=0;
-float promedio;
-//declarando las variables
-int main(int argc, char const*argv[]){
-	//construyendo la repeticion con for
-	for (int i=0;i<argc;i++){
-		m=atof(argv[i]);
-		y=y+m;
-	}
-	//esta es la operacion para generar el promedio
-	promedio=y/(argc-1);
-	printf("%.2lf\n",promedio);
-	return 0;
+int main(int argc, char*argv []){
+//se declaran variables y asignan valor
+double x=0;
+//creando la estructura de repetición 
+for (int i=1;i<argc;i++){
+doble y=atof(argv[i]);
+x=y+x;
+}
+//la operación para generar promedio
+doble promedio=x/(argc-1);
+printf("%.2lf\n",promedio);
+
+return 0;
 }
