@@ -9,7 +9,7 @@ doble y=atof(argv[i]);
 x=y+x;
 }
 //la operación para generar promedio
-doble promedio=x/(argc-1);
+double promedio=x/(argc-1);
 printf("%.2lf\n",promedio);
 
 return 0;
