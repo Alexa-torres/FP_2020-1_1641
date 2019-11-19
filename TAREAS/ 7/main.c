@@ -1,22 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
-int main(int argc, char *argu[]) {
-//declaramos variables
-	int a;
-	int b;
-	int c=1;
-	a=atof(argu[1]);
-	b=atof(argu[2]);
-	//Ahora vemos donde la vamos a almacenar
-	for (int i = 0; i < b; i++)
-	{
-		//decimos en donde se va a guardar y que se va a multiplicar
-		c=c*a;
+int main( int argc, char *argv[]) {
+
+	double x = atof(argv[1]);  // El primer parametro se convierte a double
+	double y = atof(argv[2]);  // El segundo parametro se convierte a double
+	double z = x;  // El valor de 'x' se copia en la variable 'z'
+
+	for(int i=1; i<y; i++) {  // 'for' se encargara de multiplicar el valor de 'x' por si mismo 'y' veces
+		x = x*z;
 	}
-	//imprimimos el resultado
-	printf("%.2d\n",c );
 
-return 0;
+	printf("%.2f\n", x);  // El valor final de 'x' que resulta en 'x^y' se imprime
+
+
+	return 0;
 }
